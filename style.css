@@ -146,3 +146,60 @@ footer p {
   line-height: 28px;
   margin-bottom: 30px;
 }
+
+/* === MODAL === */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: fixed;
+  display: flex;
+}
+
+.modal {
+  margin: auto;
+  background-color: white;
+  width: 660px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.modal__recipe-image {
+  margin: 30px 30px 20px 30px;
+}
+
+.modal__recipe-image img {
+  object-fit: cover;
+  border-radius: 15px;
+  width: 600px;
+  height: 200px;
+}
+
+.modal__recipe-title {
+  margin-bottom: 5px;
+}
+
+.modal__recipe-title h1 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.modal__recipe-author {
+  margin-bottom: 30px;
+}
+
+.modal__recipe-author p {
+  font-size: 18px;
+  color: #777777;
+}
+
+.close-modal {
+  padding: 30px;
+}
+
+.close-modal a {
+  font-size: 16px;
+  color: #999999;
+  text-decoration: none;
+}
