@@ -78,6 +78,17 @@ header {
   line-height: 28px;
 }
 
+.panel .text-panel a {
+  color: #000000;
+  font-size: 18px;
+  line-height: 28px;
+  text-decoration: none;
+}
+
+.panel .text-panel a:hover {
+  font-weight: bold;
+}
+
 .panel .chef{
   position: absolute;
   right: 100px;
