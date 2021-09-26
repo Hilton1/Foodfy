@@ -1,0 +1,28 @@
+{% extends "layouts.njk" %}
+
+{% block title %}
+  <title>Recipes</title>
+{% endblock title %}
+
+{% block links %}
+  <a href="/about">Sobre</a>
+  <a href="/recipes" class="selected">Receitas</a>
+{% endblock links %}
+{% block content %}
+  <main>
+    <h1>Mais acessadas</h1>
+
+    <div class="recipes">
+      {% for recipe in recipes %}
+        <div class="recipe" id="{{recipes.indexOf(recipe)}}">
+          <img src="{{recipe.image}}" alt="Foto do {{recipe.title}}">
+          <h2>{{recipe.title}}</h2>
+          <p>por {{recipe.author}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </main>
+  
+  <script src="scripts.js"></script>
+{% endblock content %}
+

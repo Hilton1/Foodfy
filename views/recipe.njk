@@ -1,0 +1,54 @@
+{% extends "layouts.njk" %}
+
+{% block content %}
+  <main>
+    <div class="recipe__image">
+      <img src="{{recipe.image}}" alt="Foto da receita">
+    </div>
+
+    <div class="recipe__title_and_author">
+      <h1>{{recipe.title}}</h1>
+      <p>por {{recipe.author}}</p>
+    </div>
+    
+
+    <div class="ingredients-container">
+      <div class="recipe__description-title">
+        <h2>Ingredientes</h2>
+        <button id="hideShow_ingredients" onclick="hideShow('.ingredients', '#hideShow_ingredients')">ESCONDER</button>
+      </div>
+      <div class="ingredients">
+        {% for ingredient in recipe.ingredients %}
+          <li><span>{{ingredient}}</span></li>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="preparation-container">
+      <div class="recipe__description-title">
+        <h2>Modo de preparo</h2>
+        <button id="hideShow_preparation" onclick="hideShow('.preparation','#hideShow_preparation')">ESCONDER</button>
+      </div>
+      <div class="preparation">
+        {% for preparation in recipe.preparation %}
+          <li><span>{{preparation}}</span></li>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if recipe.information %}
+      <div class="informations-container">
+        <div class="recipe__description-title">
+          <h2>Informações adicionais</h2>
+          <button id="hideShow_informations" onclick="hideShow('.informations', '#hideShow_informations')">ESCONDER</button>
+        </div>
+        <div class="informations">
+          <p>{{recipe.information}}</p>
+        </div>
+      </div>
+    {% endif %}
+    
+  </main>
+
+  <script src="/scripts.js"></script>
+{% endblock content %}
